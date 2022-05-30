@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#343434">
+    <title>Usando Iframe</title>
+    <!--<link rel="stylesheet" href="./css/reset.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/exercicio.css">-->
+</head>
+<body>
+
+    <header class="header">
+        <span class="headerTitle">
+            Usando Iframe
+        </span>
+    </header>
+    <nav class="menu">
+      <a href="?vid=OSMPST05EP13" target="myIframe">EP-1</a>
+      <a href="?vid=OSMPST05EP14" target="myIframe">EP-2</a>
+      <a href="?vid=OSMPST05EP15" target="myIframe">EP-3</a>
+      </nav>
+      <iframe id="myIframe" frameborder="0" marginwidth="0" marginheight="0" scrolling="NO" width="100%" height="350"></iframe>
+
+      <!--<iframe name=Player "" src="" frameborder=0 height=400 scrolling=no width=640 allowFullScreen></iframe>-->
+
+    <footer class="footer">
+  
+    </footer>
+<script>
+           let Player = document.getElementById("myIframe");
+           let url_string = "https://sinalpublico.com/player3/server1httphlb.php";
+            //let width = "";
+            //let height = "";
+            //let geo = "";
+           let url = window.location.href;
+              url = url.split('?vid=');
+              url = url[1];
+           let adsURL = url_string+"?vid="+url;
+            console.log(adsURL);
+            myIframe.src = adsURL;
+        </script>
+</body>
+</html>
